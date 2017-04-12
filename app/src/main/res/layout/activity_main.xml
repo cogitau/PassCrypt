@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#81D4FA"
+    tools:context="com.example.bryan.password.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/passLength"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/numCount"
+        android:layout_alignLeft="@+id/numCount"
+        android:layout_alignStart="@+id/numCount"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:hint="Length"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+
+        app:layout_constraintBottom_toTopOf="@+id/numCount"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <EditText
+        android:id="@+id/numCount"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/symbolCount"
+        android:layout_alignLeft="@+id/symbolCount"
+        android:layout_alignStart="@+id/symbolCount"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:hint="Number count"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/symbolCount"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <EditText
+        android:id="@+id/symbolCount"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/generateButton"
+        android:layout_alignLeft="@+id/generateButton"
+        android:layout_alignStart="@+id/generateButton"
+        android:layout_marginBottom="26dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:hint="Symbol count"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:ellipsize="start"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/generateButton"
+        android:layout_width="300dp"
+        android:layout_height="74dp"
+        android:background="@drawable/roundedbutton"
+        android:contextClickable="true"
+        android:text="Generate Password!"
+        android:textColor="#81D4FA"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        tools:layout_editor_absoluteX="138dp"
+        android:layout_above="@+id/clipboardButton"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignStart="@+id/password"
+        android:layout_marginBottom="47dp" />
+
+    <Button
+        android:id="@+id/clipboardButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="93dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Copy to clipboard"
+        android:textColor="#81D4FA"
+        android:layout_above="@+id/password"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/passwordStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp" />
+
+</RelativeLayout>

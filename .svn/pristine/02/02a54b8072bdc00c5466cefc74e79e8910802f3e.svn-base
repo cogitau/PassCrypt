@@ -1,0 +1,38 @@
+package Password;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+/**
+ * Created by byamba on 3/14/17.
+ */
+public class PasswordTest {
+    @Test
+    public void generatePassword() throws Exception {
+        Password testPassword = new Password(5, 2, 1);
+
+        assertEquals();
+    }
+
+    @Test
+    public void generateLetters() throws Exception {
+
+    }
+
+    @Test
+    public void generateNumbers() throws Exception {
+
+    }
+
+    @Test
+    public void generateSymbols() throws Exception {
+
+    }
+
+    @Test
+    public void shufflePassword() throws Exception {
+
+    }
+
+}

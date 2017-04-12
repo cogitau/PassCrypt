@@ -1,0 +1,59 @@
+package Password;
+
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import static org.junit.Assert.*;
+
+/**
+ * Created by byamba on 3/14/17.
+ */
+public class PasswordTest {
+
+    @Test
+    public void generateLetters() throws Exception {
+        Password testPassword = new Password(5, 2, 1);
+        String characterMap = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        List<String> characterMapAsList = Arrays.asList(characterMap.split(""));
+
+        char letters[] = testPassword.generateLetters().toCharArray();
+        assert letters.length == 3;
+
+        for (char character : letters){
+            assert characterMapAsList.contains(character);
+        }
+    }
+
+    @Test
+    public void generateNumbers() throws Exception {
+        Password testPassword = new Password(5, 2, 1);
+        String characterMap = "0123456789";
+        List<String> characterMapAsList = Arrays.asList(characterMap.split(""));
+
+        char numbers[] = testPassword.generateNumbers().toCharArray();
+        assert numbers.length == 2;
+
+        for (char character : numbers){
+            assert characterMapAsList.contains(character);
+        }
+    }
+
+    @Test
+    public void generateSymbols() throws Exception {
+        Password testPassword = new Password(5, 2, 1);
+        String characterMap = "!@#$%^&*()_+=-|}{[]\":;'?><,./~`";
+        List<String> characterMapAsList = Arrays.asList(characterMap.split(""));
+
+        char symbols[] = testPassword.generateLetters().toCharArray();
+        assert symbols.length == 1;
+
+        for (char character : symbols){
+            assert characterMapAsList.contains(character);
+        }
+    }
+
+
+}
